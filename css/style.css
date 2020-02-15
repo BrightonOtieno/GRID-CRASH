@@ -1,0 +1,33 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+}
+
+.main,
+.sidebar {
+  padding: 1em;
+  background-color: #eee;
+}
+
+/**/
+.grid-container > :nth-child(odd) {
+  background-color: #ddd;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  grid-column-gap: 0.5em;
+}
+/*# sourceMappingURL=style.css.map */

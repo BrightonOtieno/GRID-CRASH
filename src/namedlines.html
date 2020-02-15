@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Using Named lines</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        background-color: rgb(49, 79, 104);
+        /*grid-column: 1/-1;*/
+        grid-column: main-start/content-end;
+      }
+      .menu {
+        background-color: rgb(29, 102, 59);
+      }
+      .content {
+        background-color: rgb(89, 148, 22);
+        grid-column: content-start/content-end;
+      }
+      .footer {
+        background-color: rgb(21, 74, 78);
+        grid-column: main-start/content-end;
+      }
+      .wrapper {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: [main-start] 1fr[content-start] 5fr [content-end];
+        grid-template-rows: 50px auto 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">header</div>
+      <div class="menu">Menu</div>
+      <div class="content">Content</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>

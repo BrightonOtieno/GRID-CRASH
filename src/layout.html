@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Layout using grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrapper {
+        display: grid;
+        background-color: rgb(183, 149, 199);
+        height: 100vh;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 40px auto 40px;
+      }
+      .header {
+        background-color: #609b60;
+        text-align: center;
+        grid-column: 1/-1;
+      }
+      .aside {
+        background-color: maroon;
+        text-align: center;
+        grid-column: 1/3;
+      }
+      .content {
+        background-color: mediumaquamarine;
+        text-align: center;
+        grid-column: 3/-1;
+      }
+      .footer {
+        background-color: mediumblue;
+        text-align: center;
+        grid-column: 1/-1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">Header</div>
+      <div class="aside">Aside</div>
+      <div class="content">Content</div>
+      <div class="footer">
+        Footer
+        <a href="layout2.html" style="color: red;">layout two</a>
+      </div>
+    </div>
+  </body>
+</html>
